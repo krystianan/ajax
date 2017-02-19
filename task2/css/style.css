@@ -1,0 +1,42 @@
+body {
+    margin-left: 20px;
+    background-color: #55ACEE;
+    color: white;
+}
+
+h1 {
+    border: 3px solid white;
+    width: 800px;
+    text-align: center;
+}
+
+h1,h2 {
+    width: 800px;
+    text-align: center;
+}
+
+button {
+    width: 350px;
+    height: 30px;
+    border: 3px solid white;
+    background-color: #55ACEE;
+    color: white;
+}
+
+.tweet {
+    color: white;
+}
+
+.tweet > i {
+    font-size: 50px;
+    width: 800px;
+    text-align: center;
+
+}
+
+.tweet > p {
+    font-size: 20px;
+    width: 800px;
+    text-align: center;
+
+}
