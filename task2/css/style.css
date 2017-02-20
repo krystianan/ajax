@@ -10,7 +10,7 @@ h1 {
     text-align: center;
 }
 
-h1,h2 {
+h1, h2 {
     width: 800px;
     text-align: center;
 }
@@ -31,12 +31,10 @@ button {
     font-size: 50px;
     width: 800px;
     text-align: center;
-
 }
 
 .tweet > p {
     font-size: 20px;
     width: 800px;
     text-align: center;
-
 }
