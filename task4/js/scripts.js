@@ -32,10 +32,6 @@ function setupCards(col, cards) {
     })
 }
 
-//$(function() {
-
-
-
 function Column(id, name) {
     var self = this;
 
@@ -51,10 +47,10 @@ function Column(id, name) {
         var $columnDelete = $('<button>').addClass('btn-delete').text('X');
         var $columnAddCard = $('<button>').addClass('add-card').text('Dodaj zadanie');
 
-
         $columnDelete.click(function() {
             self.removeColumn();
         });
+
         $columnAddCard.click(function(event) {
             var cardName = prompt("Wpisz nazwę karty");
             event.preventDefault();
@@ -72,13 +68,12 @@ function Column(id, name) {
                 }
             });
         });
-        // KONSTRUOWANIE ELEMENTU KOLUMNY
+
         $column.append($columnTitle)
             .append($columnDelete)
             .append($columnAddCard)
             .append($columnCardList);
 
-        // ZWRACANIE STWORZONEJ  KOLUMNY
         return $column;
     }
 }
@@ -101,26 +96,23 @@ Column.prototype = {
 
 };
 
-
 function Card(id, description) {
-    var self = this;
 
+    var self = this;
     this.id = id;
     this.description = description|| 'Nie podano nazwy';
     this.$element = createCard(); //
 
     function createCard() {
-        // TWORZENIE KLOCKÓW
+
         var $card = $('<li>').addClass('card');
         var $cardDescription = $('<p>').addClass('card-description').text(self.description);
         var $cardDelete = $('<button>').addClass('btn-delete').text('X');
 
-        // PRZYPIĘCIE ZDARZENIA
         $cardDelete.click(function() {
             self.removeCard();
         });
 
-        // SKŁADANIE I ZWRACANIE KARTY
         $card.append($cardDelete)
             .append($cardDescription);
 
@@ -138,7 +130,7 @@ Card.prototype = {
                 self.$element.remove();
             }
         });
-    }}
+    }};
 
 function initSortable() {
     $('.column-list').sortable({
@@ -146,6 +138,7 @@ function initSortable() {
         placeholder: 'card-placeholder'
     }).disableSelection();
 }
+
 var board = {
     name: 'Tablica Kanban',
 
@@ -155,6 +148,7 @@ var board = {
     },
     element: $('#board .column-container')
 };
+
 $('.create-column')
     .click(function() {
         var columnName = prompt('Wpisz nazwę kolumny');
