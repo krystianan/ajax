@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin-ext');
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #665858;
+}
+
+#board {
+    text-align: center;
+    color: greenyellow;
+    margin-top: 20px;
+}
+
+.column-container {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    width: 280px;
+    border-radius: 5px;
+    text-align: left;
+    flex-wrap: wrap;
+    background: black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.column-title {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.create-column {
+    box-shadow: 0;
+    border: 2px solid white;
+    width: 120px;
+    height: 30px;
+    margin: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background: black;
+}
+
+.create-column:hover {
+    background: black;
+}
+
+.btn-delete {
+    box-shadow: 0;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 25px;
+    height: 25px;
+    color: white;
+    float: right;
+    margin: 4px;
+    background: black;
+    font-weight: 600;
+}
+
+.btn-delete:hover {
+    background: black;
+}
+
+.card {
+    min-height: 40px;
+}
+
+.add-card {
+    box-shadow: 0;
+    border-radius: 5px;
+    border: 2px solid white;
+    width: 100px;
+    height: 30px;
+    color: white;
+    margin: 20px 0 20px 0;
+    background: black;
+}
+.add-card:hover {
+    background: black;
+}
+
+.column-list {
+    list-style: none;
+    width: 280px;
+    text-align: left;
+    min-height: 500px;
+}
+
+.card-description {
+    flex-direction: row-reverse;
+    width: 100px;
+}
